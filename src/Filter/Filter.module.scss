@@ -1,0 +1,54 @@
+.filterWrapper {
+  width: 230px;
+  height: 258px;
+  padding: 20px 0;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.filterItems {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.filterTitle {
+  padding: 0 20px;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: #4a4a4a;
+}
+
+.filterItemList {
+  display: flex;
+  flex-direction: column;
+}
+
+.filterItem {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.filterItem:hover {
+  background-color: #f1fcff;
+}
+
+.filterCheckbox {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.filterLabel {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
