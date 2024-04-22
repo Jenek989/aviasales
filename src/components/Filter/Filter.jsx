@@ -12,11 +12,11 @@ const Filter = ({ filters, changeFilter }) => {
                 <input
                   className={classes.filterCheckbox}
                   type="checkbox"
-                  id="1"
+                  id={filter.id}
                   onChange={() => changeFilter(filter.id)}
                   checked={filter.isChecked}
                 ></input>
-                <label className={classes.filterLabel} htmlFor="1">
+                <label className={classes.filterLabel} htmlFor={filter.id}>
                   {filter.text}
                 </label>
               </li>

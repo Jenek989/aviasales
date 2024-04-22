@@ -41,8 +41,25 @@
 }
 
 .filterCheckbox {
-  margin-right: 10px;
+  display: none;
   cursor: pointer;
+}
+
+.filterCheckbox + label::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 1px solid #9abbce;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.filterCheckbox:checked + label::before {
+  border-color: #2196f3;
+  background-image: url('../../img/checkbox.svg');
 }
 
 .filterLabel {

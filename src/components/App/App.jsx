@@ -7,15 +7,14 @@ import SortTabs from '../SortTabs/SortTabs';
 import { CardListContainer } from '../Container/Container';
 import Spinner from '../Spinner/Spinner';
 import * as actions from '../../redux/actions';
+import logo from '../../img/logo.svg';
 
-import logo from './logo.svg';
 import classes from './App.module.scss';
 
 const App = ({ fetchTickets, countVisibleCards, changeTab, tabs, filters, changeFilter, isLoaded }) => {
   useEffect(() => {
     fetchTickets();
   }, []);
-  console.log(isLoaded);
   const spinner = !isLoaded ? <Spinner /> : null;
   return (
     <div className={classes.appWrapper}>
