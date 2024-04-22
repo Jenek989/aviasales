@@ -5,7 +5,7 @@ import CardList from '../CardList/CardList';
 
 const getFilterCards = (tickets, filter = []) => {
   if (filter.some((f) => f.id === 1)) return tickets;
-  if (!filter.length) return tickets;
+  if (!filter.length) return [];
   return tickets.filter((ticket) => filter.some((f) => ticket.segments.every((t) => t.stops.length === f.value)));
 };
 
@@ -31,6 +31,7 @@ const mapStateToProps = (state) => ({
     state.filtersReducer.filters.filter((f) => f.isChecked)
   ),
   count: state.countReducer,
+  isLoaded: state.isLoadedReducer.isLoaded,
 });
 
 export const CardListContainer = connect(mapStateToProps)(CardList);

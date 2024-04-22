@@ -21,6 +21,7 @@ export const fetchTickets = () => async (dispatch) => {
       if (!data) continue;
       dispatch({ type: SET_CARDLIST, cardList: data.tickets });
       stop = data.stop;
+      if (stop) dispatch(setLoaded(true));
     }
   } catch (error) {
     dispatch(setError(true));

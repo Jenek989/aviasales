@@ -9,6 +9,5 @@ export const store = configureStore({
       immutableCheck: false,
       serializableCheck: false,
     }),
+  devTools: process.env.NODE_ENV !== 'production',
 });
-
-setTimeout(() => console.log(store.getState()), 10000);
